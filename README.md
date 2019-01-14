@@ -1,2 +1,1 @@
-# MetODeep
-A deep learning approach for prediction of methionine oxidation sites in proteins
+# MetODeep: A Deep Learning Approach for Prediction of Methionine Oxidation Sites in Proteins
