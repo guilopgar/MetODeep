@@ -112,10 +112,10 @@ do
 	# Using bootstrap strategy
 	# Using the custom general model pre-trained on both training and test S, T, Y residues
 	# Using nclass=1, transfer-leayer=1 and lr=0.001 by default
-	python ../../MusiteDeep_Keras2.0/MusiteDeep/train_kinase.py -input ../fasta_files_bs/all_train_MetOx_bs_$i.fasta -background-prefix $b -output-prefix $ft/metox_model_custom_general_${p}_bs_$i -residue-types M -nclass $n -transferlayer $tl -lr $lr
+	python ../MusiteDeep_Keras2.0/MusiteDeep/train_kinase.py -input fasta_files_bs/all_train_MetOx_bs_$i.fasta -background-prefix $b -output-prefix $ft/metox_model_custom_general_${p}_bs_$i -residue-types M -nclass $n -transferlayer $tl -lr $lr
 
 	# Test
-	python ../../MusiteDeep_Keras2.0/MusiteDeep/predict.py -input ../fasta_files_bs/all_test_MetOx_bs_$i.fasta -predict-type custom -model-prefix $ft/metox_model_custom_general_${p}_bs_$i -output $res/metox_result_custom_general_${p}_bs_$i
+	python ../MusiteDeep_Keras2.0/MusiteDeep/predict.py -input fasta_files_bs/all_test_MetOx_bs_$i.fasta -predict-type custom -model-prefix $ft/metox_model_custom_general_${p}_bs_$i -output $res/metox_result_custom_general_${p}_bs_$i
 
 	# Remove model files
 	cd $ft
