@@ -110,7 +110,7 @@ for i in {1..100}
 do
 	# Train
 	# Using bootstrap strategy
-	# Using the custom general model pre-trained on both training and test S, T, Y residues
+	# Using the custom general model pre-trained on both training and testing phosphorylation data
 	# Using nclass=1, transfer-leayer=1 and lr=0.001 by default
 	python ../MusiteDeep_Keras2.0/MusiteDeep/train_kinase.py -input fasta_files_bs/all_train_MetOx_bs_$i.fasta -background-prefix $b -output-prefix $ft/metox_model_custom_general_${p}_bs_$i -residue-types M -nclass $n -transferlayer $tl -lr $lr
 
